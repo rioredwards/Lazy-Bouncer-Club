@@ -37,7 +37,7 @@ describe('lazy-bouncer routes', () => {
     pool.end();
   });
 
-  it.skip('creates a new user', async () => {
+  it('creates a new user', async () => {
     const res = await request(app).post('/api/v1/users').send(mockUser);
     const { firstName, lastName, email } = mockUser;
 
